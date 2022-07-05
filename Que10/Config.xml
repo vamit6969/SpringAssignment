@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="java.lang.String" name="Amay">
+		<constructor-arg value="Amay"/>
+	</bean>
+	
+	<bean class="java.lang.Double" name="350">
+		<constructor-arg value="350"/>
+	</bean>
+	
+	<bean class="java.lang.String" name="Gurvinder">
+		<constructor-arg value="Gurvinder"/>
+	</bean>
+	
+	<bean class="java.lang.Double" name="401">
+		<constructor-arg value="738"/>
+	</bean>
+	
+	<bean class="java.lang.String" name="Amit">
+		<constructor-arg value="Amit"/>
+	</bean>
+	
+	<bean class="java.lang.Double" name="324">
+		<constructor-arg value="324"/>
+	</bean>
+
+
+	<bean class="com.yash.studentdetails_10.StudentDetails"
+		name="studentDetails">
+
+		<property name="students">
+			<map>
+				<entry key-ref="Amit" value-ref="350"/>
+				<entry key-ref="Nitesh" value-ref="324"/>
+				<entry key-ref="Anshul" value-ref="401"/>
+			</map>
+		</property>
+	</bean>
+
+</beans>
