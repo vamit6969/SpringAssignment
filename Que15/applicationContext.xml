@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean class="com.yash.itempurchasedbycustomer.Category"
+		id="category">
+		<property name="categoryName" value="Laptops"></property>
+	</bean>
+	<bean class="com.yash.itempurchasedbycustomer.Item" id="item1">
+		<property name="itemName" value="dell inspire X"></property>
+		<property name="itemDescription"
+			value="1TB HDD 8GB RAM"></property>
+		<property name="itemPrice" value="50000"></property>
+		<property name="category" ref="category"></property>
+	</bean>
+	<bean class="com.yash.itempurchasedbycustomer.Item" id="item2">
+		<property name="itemName" value="Lenovo Thinkpad"></property>
+		<property name="itemDescription"
+			value="500GB HDD 4GB RAM"></property>
+		<property name="itemPrice" value="40000"></property>
+		<property name="category" ref="category"></property>
+	</bean>
+	<bean class="com.yash.itempurchasedbycustomer.Item" id="item3">
+		<property name="itemName" value="HP"></property>
+		<property name="itemDescription"
+			value="1TB HDD 16GB RAM"></property>
+		<property name="itemPrice" value="80000"></property>
+		<property name="category" ref="category"></property>
+	</bean>
+	<bean class="com.yash.itempurchasedbycustomer.Customer"
+		id="customer">
+		<property name="customerName" value="AMIT"></property>
+		<property name="purchasedItem">
+			<list>
+				<ref bean="item1" />
+				<ref bean="item3" />
+			</list>
+		</property>
+	</bean>
+
+</beans>
